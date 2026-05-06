@@ -1,18 +1,25 @@
-num1 = float(input("Digite o primeiro número: "))
-num2 = float(input("Digite o segundo número: "))
-operacao = input("Digite a opreração (+, -, *, /): ")
+print("=== Minicalculadora ===")
 
-if operacao == "+":
-    resultado = num1 + num2
-elif operacao == "-":
-    resultado = num1 - num2
-elif operacao == "*":
-    resultado = num1 * num2
-elif operacao == "/":
-    if num2 != 0:
-        resultado = num1 / num2
-    else:
-        resultado = "Erro divisão por zero"
+while True:
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+    operacao = input("Digite a opreração (+, -, *, /): ")
 
+    if operacao == "+":
+        resultado = num1 + num2
+    elif operacao == "-":
+        resultado = num1 - num2
+    elif operacao == "*":
+        resultado = num1 * num2
+    elif operacao == "/":
+        if num2 != 0:
+            resultado = num1 / num2
+        else:
+            resultado = "Erro divisão por zero"
+    print(f"Resultado: {resultado}")
 
-print("Resultado: ", resultado)
+    sair = input("\nDesja sair? (s/n): ").lower()
+
+    if sair == "s":
+        print("Ate logo!")
+        break
