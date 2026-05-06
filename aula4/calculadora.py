@@ -9,6 +9,10 @@ elif operacao == "-":
 elif operacao == "*":
     resultado = num1 * num2
 elif operacao == "/":
-    resultado = num1 / num2
+    if num2 != 0:
+        resultado = num1 / num2
+    else:
+        resultado = "Erro divisão por zero"
+
 
 print("Resultado: ", resultado)
